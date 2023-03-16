@@ -1,5 +1,4 @@
 import { useNavigation } from "@react-navigation/native";
-import { Pressable } from "react-native";
 import { Text } from "react-native";
 import { View } from "react-native";
 import React from "react";
@@ -18,11 +17,7 @@ const Untitled1 = ({
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Pressable><Pressable onPress={() => {
-          navigation.navigate("aboutTheApp", {
-            title: "Home"
-          });
-        }}><View style={styles.tCNUIrCG}><Text style={styles.WsZoMhxO}>Click Me</Text></View></Pressable></Pressable></ScrollView>
+    }}><View style={styles.tCNUIrCG}><Text style={styles.WsZoMhxO}>Click Me</Text></View></ScrollView>
     </SafeAreaView>;
 };
 
