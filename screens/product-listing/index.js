@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
 export default ProductListing;
 
 const Button = params => {
-  const backgroundColor = params.backgroundColor || "#000";
+  const backgroundColor = params.backgroundColor || "red";
   const textColor = params.textColor || "#fff";
   const btnStyle = {
     backgroundColor: backgroundColor,
