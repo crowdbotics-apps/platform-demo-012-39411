@@ -1,15 +1,11 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Text } from "react-native";
 import { View } from "react-native";
 import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled1 = ({
-  route
-}) => {
-  const {
-    title = "title"
-  } = route.params || {};
+const Untitled1 = ({}) => {
   const navigation = useNavigation();
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
@@ -17,7 +13,9 @@ const Untitled1 = ({
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><View style={styles.tCNUIrCG}><Text style={styles.WsZoMhxO}>Click Me</Text></View></ScrollView>
+    }}><Pressable onPress={() => {
+        navigation.navigate("aboutTheApp");
+      }}><View style={styles.tCNUIrCG}><Text style={styles.WsZoMhxO}>Click Me</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
