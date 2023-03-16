@@ -1,7 +1,6 @@
+import { ImageBackground } from "react-native";
 import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Text } from "react-native";
-import { View } from "react-native";
 import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
@@ -13,9 +12,10 @@ const Untitled1 = ({}) => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Pressable onPress={() => {
-        navigation.navigate("aboutTheApp");
-      }}><View style={styles.tCNUIrCG}><Text style={styles.WsZoMhxO}>Click Me</Text></View></Pressable></ScrollView>
+    }}>
+        <Pressable><Pressable onPress={() => {
+          navigation.navigate("aboutTheApp");
+        }}><ImageBackground style={styles.jbwOyXQU} source={require("./background-basic-banner.png")} resizeMode="cover"></ImageBackground></Pressable></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     color: "#777777",
     position: "absolute",
-    left: 108.5,
+    left: 98.5,
     top: 256.5
   },
   WsZoMhxO: {
@@ -44,6 +44,26 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 20,
     top: 5
+  },
+  rcpuvhzg: {
+    backgroundColor: "#ffffff",
+    borderColor: "#cccccc",
+    width: 200,
+    height: 30,
+    position: "absolute",
+    left: 78.5,
+    top: 199
+  },
+  AaxjoNFc: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  jbwOyXQU: {
+    width: 333,
+    height: 343
   }
 });
 export default Untitled1;
