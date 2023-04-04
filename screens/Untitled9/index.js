@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { useState } from "react";
 import { faqList } from "../../modules/faq/store/index.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -8,10 +6,6 @@ import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled9 = () => {
-  const {
-    entities: FaqList
-  } = useSelector(state => state.FaqList);
-  const [localPassword, setLocalPassword] = useState(FaqList.password);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(faqList());
@@ -22,7 +16,7 @@ const Untitled9 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><TextInput style={styles.MOMCPsgY}></TextInput><TextInput style={styles.luBJZacE} value={localPassword}></TextInput><View style={styles.YMMVUoTF}></View></ScrollView>
+    }}><TextInput style={styles.MOMCPsgY}></TextInput><TextInput style={styles.luBJZacE}></TextInput><View style={styles.YMMVUoTF}></View></ScrollView>
     </SafeAreaView>;
 };
 
