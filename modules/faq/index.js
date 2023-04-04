@@ -35,9 +35,9 @@ const FAQ = () => {
   };
 
   const searchView = () => {
-    return <View style={options.styles.searchSection}>
-        <Image style={options.styles.searchIcon} source={Images.searchIcon} resizeMode="contain" />
-        <TextInput style={options.styles.input} placeholder="Search here" onChangeText={searchHandler} placeholderTextColor={options.colors.darkGray} value={searchText} />
+    return <View style={options.styles?.searchSection}>
+        <Image style={options.styles?.searchIcon} source={Images.searchIcon} resizeMode="contain" />
+        <TextInput style={options.styles?.input} placeholder="Search here" onChangeText={searchHandler} placeholderTextColor={options.colors?.darkGray} value={searchText} />
       </View>;
   };
 
@@ -57,14 +57,14 @@ const FAQ = () => {
     return <Divider color={colors.darkCharcoal} />;
   };
 
-  return <View style={options.styles.container}>
-      <View style={options.styles.heading}>
+  return <View style={options.styles?.container}>
+      <View style={options.styles?.heading}>
         <TouchableOpacity style={_styles.CGFYhQnk} onPress={() => navigation.goBack()}>
-          <Image style={options.styles.backIcon} source={Images.backIcon} resizeMode="contain" />
+          <Image style={options.styles?.backIcon} source={Images.backIcon} resizeMode="contain" />
         </TouchableOpacity>
-        <Text style={options.styles.title}>{options.title}</Text>
+        <Text style={options.styles?.title}>{options.title}</Text>
       </View>
-      <FlatList data={filterList} renderItem={_renderItem} keyExtractor={item => item.id} style={options.styles.list} ListHeaderComponent={searchView()} onEndReachedThreshold={0.1} onEndReached={fetchMoreData} showsVerticalScrollIndicator={false} ItemSeparatorComponent={separator} />
+      <FlatList data={filterList} renderItem={_renderItem} keyExtractor={item => item.id} style={options.styles?.list} ListHeaderComponent={searchView()} onEndReachedThreshold={0.1} onEndReached={fetchMoreData} showsVerticalScrollIndicator={false} ItemSeparatorComponent={separator} />
     </View>;
 };
 
